@@ -44,6 +44,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_external_id"></a> [external\_id](#input\_external\_id) | The unique ID provided by Usage.ai on the 'Add an IAM Role' page. | `string` | n/a | yes |
+| <a name="input_role_principal"></a> [role\_principal](#input\_role\_principal) | The role Principal provided by Usage.ai on the 'Add an IAM Role' page. Of the format 'arn:aws:iam::XXXXXXXXXXXX:user/awsconnector' | `string` | n/a | yes |
 
 ## Outputs
 

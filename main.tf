@@ -55,7 +55,7 @@ resource "aws_iam_role" "usage_ai" {
       {
         "Action" : "sts:AssumeRole",
         "Principal" : {
-          "AWS" : "arn:aws:iam::826182721854:user/awsconnector"
+          "AWS" : var.role_principal
         },
         "Effect" : "Allow",
         "Condition" : {
