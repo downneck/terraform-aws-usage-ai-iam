@@ -47,5 +47,7 @@ No inputs.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_role_arn"></a> [role\_arn](#output\_role\_arn) | The ARN of the UsageAI role. For use in linking to Usage.ai. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
