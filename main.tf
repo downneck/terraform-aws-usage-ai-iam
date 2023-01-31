@@ -62,7 +62,7 @@ resource "aws_iam_role" "usage_ai" {
         "Effect" : "Allow",
         "Condition" : {
           "StringEquals" : {
-            "sts:ExternalId" : "gpLmBRB546"
+            "sts:ExternalId" : var.external_id
           }
         }
       }

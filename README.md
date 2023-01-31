@@ -8,8 +8,9 @@ There are no user servicable parts within, thus no variables needed.
 
 ````terraform
 module "usage-ai-iam" {
-  source  = "downneck/usage-ai-iam/aws"
-  version = "0.1.0"
+  source      = "downneck/usage-ai-iam/aws"
+  version     = "x.x.x"
+  external_id = "XXXXXXXXXXX"
 }
 ````
 
@@ -43,7 +44,9 @@ No modules.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_external_id"></a> [external\_id](#input\_external\_id) | The unique ID provided by Usage.ai on the 'Add an IAM Role' page. | `string` | n/a | yes |
 
 ## Outputs
 
