@@ -6,9 +6,10 @@ This module creates the IAM components necessary to support Usage.ai's AWS cost 
 
 ````terraform
 module "usage-ai-iam" {
-  source      = "downneck/usage-ai-iam/aws"
-  version     = "x.x.x"
-  external_id = "XXXXXXXXXXX"
+  source         = "downneck/usage-ai-iam/aws"
+  version        = "x.x.x"
+  role_principal = "arn:aws:iam::XXXXXXXXXXXX:user/awsconnector"
+  external_id    = "XXXXXXXXXXX"
 }
 ````
 
