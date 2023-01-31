@@ -1,4 +1,4 @@
-# Terraform Usage.ai IAM module 
+# Terraform AWS Usage.ai IAM module 
 
 This module creates the IAM components necessary to support Usage.ai's AWS cost optimization service.
 
