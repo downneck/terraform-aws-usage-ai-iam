@@ -7,11 +7,12 @@ There are no user servicable parts within, thus no variables needed.
 ## Usage
 
 ````terraform
-module "usage_ai" {
-    source  = "blahblah"
-    version = "0.1.0"
+module "usage-ai-iam" {
+  source  = "downneck/usage-ai-iam/aws"
+  version = "0.1.0"
 }
 ````
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
