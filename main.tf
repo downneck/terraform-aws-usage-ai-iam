@@ -1,5 +1,3 @@
-data "aws_caller_identity" "current" {}
-
 data "aws_iam_policy_document" "usage_ai" {
   statement {
     sid       = "1"
@@ -57,7 +55,7 @@ resource "aws_iam_role" "usage_ai" {
       {
         "Action" : "sts:AssumeRole",
         "Principal" : {
-          "AWS" : "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
+          "AWS" : "arn:aws:iam::826182721854:user/awsconnector"
         },
         "Effect" : "Allow",
         "Condition" : {
