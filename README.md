@@ -2,8 +2,6 @@
 
 This module creates the IAM components necessary to support Usage.ai's AWS cost optimization service.
 
-There are no user servicable parts within, thus no variables needed.
-
 ## Usage
 
 ````terraform
