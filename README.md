@@ -8,7 +8,6 @@ This module creates the IAM components necessary to support Usage.ai's AWS cost 
 module "usage-ai-iam" {
   source         = "downneck/usage-ai-iam/aws"
   version        = "x.x.x"
-  role_principal = "arn:aws:iam::XXXXXXXXXXXX:user/awsconnector"
   external_id    = "XXXXXXXXXXX"
 }
 ````
@@ -45,7 +44,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_external_id"></a> [external\_id](#input\_external\_id) | The unique ID provided by Usage.ai on the 'Add an IAM Role' page. | `string` | n/a | yes |
-| <a name="input_role_principal"></a> [role\_principal](#input\_role\_principal) | The role Principal provided by Usage.ai on the 'Add an IAM Role' page. Of the format 'arn:aws:iam::XXXXXXXXXXXX:user/awsconnector' | `string` | n/a | yes |
+| <a name="input_role_principal"></a> [role\_principal](#input\_role\_principal) | The role Principal provided by Usage.ai on the 'Add an IAM Role' page. Of the format 'arn:aws:iam::XXXXXXXXXXXX:user/awsconnector'. The included default works at the moment, but is a variable in case Usage.ai ever changes it from the default. | `string` | `"arn:aws:iam::826182721854:user/awsconnector"` | no |
 
 ## Outputs
 
