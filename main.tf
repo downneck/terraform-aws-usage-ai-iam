@@ -1,3 +1,8 @@
+# usage.ai's default terraform requests the following permissions that we believe are
+# overly broad at present and have been omitted:
+# - "servicequotas:RequestServiceQuotaIncrease",
+# - "organizations:InviteAccountToOrganization" 
+
 data "aws_iam_policy_document" "usage_ai" {
   statement {
     sid       = "1"
@@ -9,9 +14,13 @@ data "aws_iam_policy_document" "usage_ai" {
       "autoscaling:Describe*",
       "aws-portal:ViewBilling",
       "aws-portal:ViewUsage",
+      "consolidatedbilling:List*",
+      "consolidatedbilling:Get*",
       "ce:Describe*",
       "ce:Get*",
       "ce:List*",
+      "cloudwatch:GetMetricData",
+      "cur:Get*",
       "ec2:Describe*",
       "ec2:AcceptReservedInstancesExchangeQuote",
       "ec2:CancelReservedInstancesListing",
@@ -24,6 +33,8 @@ data "aws_iam_policy_document" "usage_ai" {
       "ecs:List*",
       "eks:Describe*",
       "eks:List*",
+      "organizations:List*",
+      "organizations:Describe*",
       "pricing:DescribeServices",
       "pricing:GetAttributeValues",
       "pricing:GetProducts",
@@ -33,6 +44,19 @@ data "aws_iam_policy_document" "usage_ai" {
       "servicequotas:Get*",
       "servicequotas:List*",
       "sts:AssumeRole",
+      "rds:Describe*",
+      "rds:List*",
+      "rds:PurchaseReservedDbInstancesOffering",
+      "elasticache:Describe*",
+      "elasticache:List*",
+      "elasticache:PurchaseReservedCacheNodesOffering",
+      "es:Describe*",
+      "es:List*",
+      "es:PurchaseReservedInstanceOffering",
+      "redshift:Describe*",
+      "redshift:PurchaseReservedNodeOffering",
+      "redshift:AcceptReservedNodeExchange",
+      "redshift:GetReservedNodeExchangeOfferings",
       "support:*"
     ]
   }
