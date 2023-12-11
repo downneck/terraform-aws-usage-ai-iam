@@ -10,17 +10,21 @@ data "aws_iam_policy_document" "usage_ai" {
     resources = ["*"]
 
     actions = [
+      "account:GetAccountInformation",
       "application-autoscaling:Describe*",
       "autoscaling:Describe*",
-      "aws-portal:ViewBilling",
-      "aws-portal:ViewUsage",
+      "billing:Get*",
+      "billing:ListBillingViews",
       "consolidatedbilling:List*",
       "consolidatedbilling:Get*",
       "ce:Describe*",
       "ce:Get*",
       "ce:List*",
       "cloudwatch:GetMetricData",
+      "consolidatedbilling:GetAccountBillingRole",
+      "consolidatedbilling:ListLinkedAccounts",
       "cur:Get*",
+      "cur:ValidateReportDestination",
       "ec2:Describe*",
       "ec2:AcceptReservedInstancesExchangeQuote",
       "ec2:CancelReservedInstancesListing",
